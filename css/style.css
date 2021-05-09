@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Raleway:bold&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Philosopher|Philosopher:bold&display=swap');
+
+/* general */
+
+#wrapper {
+    width: 1440px;
+
+    margin: 0 auto
+}
+
+.text {
+    color: #171717;
+    font-family: Raleway, 'Open Sans', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 32px;
+}
+
+.text a {
+    color: #171717;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.text.header {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Philosopher, 'Open Sans', serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text.small {
+    font-size: 14px;
+}
+
+/* header */
+
+header {
+    height: 78px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* part 1 */
+
+#header-1 {
+    height: 569px;
+    width: 100%;
+    background-image: linear-gradient(to right, #D5D4D0 0%, #D5D4D0 25%, transparent 70%), url("../img/bg1.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+#header-1-text-block {
+    width: 506px;
+    margin-left: 163px;
+    padding-top: 132px;
+}
+
+
+/* part 2 */
+
+#header-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#header-2 .text.header{
+    color: #D67B3E;
+    margin: 50px auto;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+#header-2 .text.small {
+    margin-bottom: 30px;
+}
+
+#header-2-image {
+    width: 705px;
+    height: 429px;
+}
+
+#header-2-image img {
+    height: 100%;
+    width:100%
+}
+
+#header-2-text-block {
+    flex-basis: 48%;
+}
+
+
+/* part 3 */
+
+#header-3 {
+    background-color: #006D77;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 55px;
+    padding-bottom: 5px;
+}
+
+#header-3 .text {
+    color: #fff;
+}
+
+#header-3 > .person:nth-child(2n) {
+     margin-left: 60px;
+}
+
+.person {
+    flex-basis: 36%;
+}
+
+.person-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.person-header-text {
+    padding-left: 16px;
+}
+
+.person-header-text .text {
+    margin-bottom: 0;
+}
+
+.text.person-header-name {
+    font-size: 24px;
+    font-family: Philosopher, 'Open Sans', serif;
+}
+
+.text.person-header-position {
+    font-size: 16px;
+}
+
+.text.person-main-text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+/* part 4 */
+
+#header-4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#header-4 .text.header{
+    color: #D67B3E;
+    margin: 50px auto;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+#header-4 .question {
+    flex-basis: 40%;
+    padding-bottom: 40px;
+}
+
+#header-4 > .question:nth-child(2n+1) {
+    margin-left: 60px;
+}
+
+#header-4 .text {
+    margin-bottom: 0;
+}
+
+#header-4 .question .q {
+    font-weight: bold;
+}
+
+/* bottom line */
+
+#bottom-line {
+    padding-top:100px;
+    text-align: center;
+    padding-bottom: 20px;
+}
