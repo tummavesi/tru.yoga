@@ -5,7 +5,6 @@
 
 #wrapper {
     width: 1440px;
-
     margin: 0 auto
 }
 
@@ -55,17 +54,42 @@ header {
 /* part 1 */
 
 #header-1 {
-    height: 569px;
     width: 100%;
-    background-image: linear-gradient(to right, #D5D4D0 0%, #D5D4D0 25%, transparent 70%), url("../img/bg1.png");
-    background-position: center right;
-    background-repeat: no-repeat;
+    position: relative;
+}
+
+#header-1-background {
+    position: relative;
+    text-align: right;
+}
+#header-1-background img {
+    width: 100%;
+    max-width: 1153px;
+    max-height: 569px;
+}
+
+#header-1-background-overlay {
+    background: linear-gradient(to right, #D5D4D0 0%, #D5D4D0 25%, transparent 70%) no-repeat;
+    background-blend-mode: multiply;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.mobile-only {
+    display: none;
 }
 
 #header-1-text-block {
     width: 506px;
-    margin-left: 163px;
-    padding-top: 132px;
+    position: absolute;
+    left: 163px;
+    top: 132px;
+    z-index: 1;
 }
 
 
@@ -97,7 +121,6 @@ header {
 }
 
 #header-2-image img {
-    height: 100%;
     width:100%
 }
 
@@ -184,7 +207,7 @@ header {
 }
 
 #header-4 .question {
-    flex-basis: 40%;
+    flex-basis: 36%;
     padding-bottom: 40px;
 }
 
@@ -206,4 +229,143 @@ header {
     padding-top:100px;
     text-align: center;
     padding-bottom: 20px;
+}
+
+/* adaptive overrides */
+
+@media only screen and (max-width: 1439px) {
+    #wrapper {
+        width: 100%;
+        margin: 0 auto
+    }
+
+    #header-2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #header-2-text-block {
+        flex-basis: auto;
+        max-width: 76%;
+        margin-top: 30px;
+    }
+
+    #header-4 .question {
+        flex-basis: 36%;
+    }
+}
+
+@media only screen and (max-width: 1153px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+
+    #header-1 {
+        height: initial;
+        width: 100%;
+    }
+
+    #header-1-text-block {
+        width: 100%;
+        padding-top: initial;
+        position: initial;
+        max-width: 76%;
+        margin: 40px auto 0;
+    }
+
+    #header-1 .text.header {
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index: 2;
+    }
+
+    #header-1-background-overlay {
+        background: linear-gradient(180deg, rgba(203, 203, 203, 0.69) 0%, rgba(106, 106, 106, 0.69) 50%, rgba(139, 139, 139, 0.69) 100%), url("../img/bg1.png");
+        background-size: contain;
+        background-blend-mode: multiply;
+    }
+}
+
+
+@media only screen and (max-width: 705px) {
+
+    #header-2-image {
+        width: initial;
+        height: initial;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    #header-2-image {
+        width: initial;
+        height: initial;
+    }
+
+    #header-1-text-block {
+        max-width: 90%;
+        margin: 20px auto 0;
+    }
+
+    #header-1-text-block .text {
+        font-size: 14px;
+    }
+
+    #header-1-text-block .text:last-child {
+        margin-bottom: 0;
+    }
+
+    #header-2-text-block {
+        max-width: 90%;
+    }
+
+    #header-3 {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header-3 > .person {
+        max-width: 90%;
+    }
+
+    #header-3 > .person:nth-child(2n) {
+        margin-left: 0;
+    }
+
+    #header-4 {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header-4 > .question{
+        max-width: 90%;
+    }
+
+    #header-4 > .question:nth-child(2n+1) {
+        margin-left: 0;
+    }
+
+    #bottom-line {
+        padding-top: 20px;
+    }
 }
